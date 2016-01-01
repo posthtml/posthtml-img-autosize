@@ -66,7 +66,7 @@ describe('Plugin', () => {
             const html = '<img src="notExists.jpg" width="auto" height="auto">';
             return init(html, html).catch(error => {
                 expect(error.message)
-                    .toInclude('ENOENT:')
+                    .toInclude('ENOENT')
                     .toInclude('notExists.jpg');
             });
         });
