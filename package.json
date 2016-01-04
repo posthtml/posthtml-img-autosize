@@ -17,7 +17,8 @@
     "html",
     "postproccessor",
     "autosize",
-    "img"
+    "img",
+    "image"
   ],
   "babel": {
     "presets": [
