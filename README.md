@@ -22,7 +22,7 @@ posthtml([require('posthtml-img-autosize')()])
 ```
 
 
-But if you set `includeEmpty: true`, the plugin will resize all images with undefined or empty `width` and `height`:
+But if you set `includeEmpty: true`, the plugin will autosize all images with undefined or empty `width` and `height`:
 ```js
 posthtml([
     require('posthtml-img-autosize')({
