@@ -7,7 +7,7 @@ const imageSize = Promise.promisify(require('image-size'));
 export default (options = {}) => {
     return function imgAutosize(tree) {
         options.root = options.root || './';
-        options.includeEmpty = options.includeEmpty === undefined ? false : options.includeEmpty;
+        options.processEmptySize = options.processEmptySize === undefined ? false : options.processEmptySize;
 
         let promises = [];
         tree.match({tag: 'img'}, imgNode => {
@@ -16,8 +16,8 @@ export default (options = {}) => {
                 return imgNode;
             }
 
-            const isWidthDefined = options.includeEmpty ? isSizeDefined(imgTagAttrs.width) : imgTagAttrs.width !== 'auto';
-            const isHeightDefined = options.includeEmpty ? isSizeDefined(imgTagAttrs.height) : imgTagAttrs.height !== 'auto';
+            const isWidthDefined = options.processEmptySize ? isSizeDefined(imgTagAttrs.width) : imgTagAttrs.width !== 'auto';
+            const isHeightDefined = options.processEmptySize ? isSizeDefined(imgTagAttrs.height) : imgTagAttrs.height !== 'auto';
             if (isWidthDefined && isHeightDefined) {
                 return imgNode;
             }

@@ -5,7 +5,7 @@ import imgAutosize from '..';
 
 
 describe('Plugin', () => {
-    context('options.includeEmpty == false (default)', () => {
+    context('options.processEmptySize == false (default)', () => {
         it('should autosize JPG', () => {
             return Promise.all([
                 init(
@@ -75,9 +75,9 @@ describe('Plugin', () => {
 
 
 
-    context('options.includeEmpty == true', () => {
+    context('options.processEmptySize == true', () => {
         it('should autosize <img> with empty "width" or "height"', () => {
-            const options = {includeEmpty: true};
+            const options = {processEmptySize: true};
 
             return Promise.all([
                 init(

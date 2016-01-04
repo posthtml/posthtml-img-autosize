@@ -22,12 +22,12 @@ posthtml([require('posthtml-img-autosize')()])
 ```
 
 
-But if you set `includeEmpty: true`, the plugin will autosize all images with undefined or empty `width` and `height`:
+But if you set `processEmptySize: true`, the plugin will autosize all images with undefined or empty `width` and `height`:
 ```js
 posthtml([
     require('posthtml-img-autosize')({
         root: './', // Path to images base directory (default: './')
-        includeEmpty: true
+        processEmptySize: true
     })
 ])
     .process('<img src="photo.png" width="auto" height="auto"><img src="user.jpg">')
