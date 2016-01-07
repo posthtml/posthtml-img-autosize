@@ -44,6 +44,42 @@ describe('Plugin', () => {
         });
 
 
+        it('should autosize BMP', () => {
+            return init(
+                '<img src="33x16.bmp" width="auto" height="auto">',
+                '<img src="33x16.bmp" width="33" height="16">',
+                {root: './test/img'}
+            );
+        });
+
+
+        it('should autosize WebP', () => {
+            return init(
+                '<img src="163x53.webp" width="auto" height="auto">',
+                '<img src="163x53.webp" width="163" height="53">',
+                {root: './test/img'}
+            );
+        });
+
+
+        it('should autosize TIFF', () => {
+            return init(
+                '<img src="63x69.tiff" width="auto" height="auto">',
+                '<img src="63x69.tiff" width="63" height="69">',
+                {root: './test/img'}
+            );
+        });
+
+
+        it('should autosize SVG', () => {
+            return init(
+                '<img src="203x150.svg" width="auto" height="auto">',
+                '<img src="203x150.svg" width="203" height="150">',
+                {root: './test/img'}
+            );
+        });
+
+
         it('should skip <img> with empty "src"', () => {
             const html = '<div><img></div>';
             return init(html,html);
