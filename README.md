@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/maltsev/posthtml-img-autosize.svg?branch=master)](https://travis-ci.org/maltsev/posthtml-img-autosize)
 
 [PostHTML](https://github.com/posthtml/posthtml) plugin that automatically sets `width` and `height` of `<img>`.
-It supports JPG, PNG, and GIF.
+It supports JPG, PNG, GIF, BMP, TIFF, SVG, and WebP.
 
 
 ## Usage
