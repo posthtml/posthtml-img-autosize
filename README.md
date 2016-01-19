@@ -4,6 +4,7 @@
 
 [PostHTML](https://github.com/posthtml/posthtml) plugin that automatically sets `width` and `height` of `<img>`.
 It supports JPG, PNG, GIF, BMP, TIFF, SVG, and WebP.
+It autosizes both local and remote images.
 
 
 ## Usage
