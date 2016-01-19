@@ -6,7 +6,7 @@ import imgAutosize from '..';
 
 describe('Plugin', () => {
     context('options.processEmptySize == false (default)', () => {
-        it('should autosize JPG', () => {
+        it('should autosize local JPG', () => {
             return Promise.all([
                 init(
                     '<img src="test/img/100x201.jpg" width="auto" height="auto">',
@@ -26,7 +26,7 @@ describe('Plugin', () => {
         });
 
 
-        it('should autosize PNG', () => {
+        it('should autosize local PNG', () => {
             return init(
                 '<img src="img/111x52.png" width="auto" height="25" alt="hi">',
                 '<img src="img/111x52.png" width="111" height="25" alt="hi">',
@@ -35,7 +35,7 @@ describe('Plugin', () => {
         });
 
 
-        it('should autosize GIF', () => {
+        it('should autosize local GIF', () => {
             return init(
                 '<img src="140x83.gif" width="auto" height="auto">',
                 '<img src="140x83.gif" width="140" height="83">',
@@ -44,7 +44,7 @@ describe('Plugin', () => {
         });
 
 
-        it('should autosize BMP', () => {
+        it('should autosize local BMP', () => {
             return init(
                 '<img src="33x16.bmp" width="auto" height="auto">',
                 '<img src="33x16.bmp" width="33" height="16">',
@@ -53,7 +53,7 @@ describe('Plugin', () => {
         });
 
 
-        it('should autosize WebP', () => {
+        it('should autosize local WebP', () => {
             return init(
                 '<img src="163x53.webp" width="auto" height="auto">',
                 '<img src="163x53.webp" width="163" height="53">',
@@ -62,7 +62,7 @@ describe('Plugin', () => {
         });
 
 
-        it('should autosize TIFF', () => {
+        it('should autosize local TIFF', () => {
             return init(
                 '<img src="63x69.tiff" width="auto" height="auto">',
                 '<img src="63x69.tiff" width="63" height="69">',
@@ -71,7 +71,7 @@ describe('Plugin', () => {
         });
 
 
-        it('should autosize SVG', () => {
+        it('should autosize local SVG', () => {
             return init(
                 '<img src="203x150.svg" width="auto" height="auto">',
                 '<img src="203x150.svg" width="203" height="150">',
