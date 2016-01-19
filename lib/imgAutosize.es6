@@ -1,7 +1,10 @@
 import path from 'path';
+import url from 'url';
+import http from 'http';
 import Promise from 'bluebird';
 
-const imageSize = Promise.promisify(require('image-size'));
+const imageSize = require('image-size');
+const imageSizeAsPromise = Promise.promisify(imageSize);
 
 
 export default (options = {}) => {
@@ -12,7 +15,8 @@ export default (options = {}) => {
         let promises = [];
         tree.match({tag: 'img'}, imgNode => {
             let imgTagAttrs = imgNode.attrs || {};
-            if (! imgTagAttrs.src) {
+            const imgSrc = imgTagAttrs.src;
+            if (! imgSrc) {
                 return imgNode;
             }
 
@@ -22,8 +26,10 @@ export default (options = {}) => {
                 return imgNode;
             }
 
-            const imagePath = path.resolve(options.root, imgTagAttrs.src);
-            let promise = imageSize(imagePath)
+            const imgUrl = url.parse(imgSrc);
+            const image = imgUrl.host ? imgUrl : path.resolve(options.root, imgTagAttrs.src);
+
+            let promise = getImageDimensions(image)
                 .then(dimensions => {
                     if (! isWidthDefined) {
                         imgNode.attrs.width = dimensions.width;
@@ -45,6 +51,23 @@ export default (options = {}) => {
     };
 };
 
+
+
+function getImageDimensions(image) {
+    if (! image.host) {
+        return imageSizeAsPromise(image);
+    }
+
+    return new Promise((resolve, reject) => {
+        http.get(image, response => {
+            let chunks = [];
+
+            response
+                .on('data', chunk => chunks.push(chunk))
+                .on('end', () => resolve(imageSize(Buffer.concat(chunks))));
+        }).on('error', reject);
+    });
+}
 
 
 function isSizeDefined(value) {

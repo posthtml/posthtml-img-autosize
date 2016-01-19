@@ -35,6 +35,14 @@ describe('Plugin', () => {
         });
 
 
+        it('should autosize remote PNG', () => {
+            return init(
+                '<img src="http://dummyimage.com/111x52/000/fff.png" width="auto" height="25" alt="hi">',
+                '<img src="http://dummyimage.com/111x52/000/fff.png" width="111" height="25" alt="hi">'
+            );
+        });
+
+
         it('should autosize local GIF', () => {
             return init(
                 '<img src="140x83.gif" width="auto" height="auto">',
