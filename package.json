@@ -41,10 +41,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/maltsev/posthtml-img-autosize.git"
+    "url": "git://github.com/posthtml/posthtml-img-autosize.git"
   },
   "bugs": {
-    "url": "https://github.com/maltsev/posthtml-img-autosize/issues"
+    "url": "https://github.com/posthtml/posthtml-img-autosize/issues"
   },
-  "homepage": "https://github.com/maltsev/posthtml-img-autosize"
+  "homepage": "https://github.com/posthtml/posthtml-img-autosize"
 }

@@ -1,4 +1,4 @@
-# posthtml-img-autosize [![npm version](https://badge.fury.io/js/posthtml-img-autosize.svg)](http://badge.fury.io/js/posthtml-img-autosize) [![Build Status](https://travis-ci.org/maltsev/posthtml-img-autosize.svg?branch=master)](https://travis-ci.org/maltsev/posthtml-img-autosize)
+# posthtml-img-autosize [![npm version](https://badge.fury.io/js/posthtml-img-autosize.svg)](http://badge.fury.io/js/posthtml-img-autosize) [![Build Status](https://travis-ci.org/posthtml/posthtml-img-autosize.svg?branch=master)](https://travis-ci.org/posthtml/posthtml-img-autosize)
 
 [PostHTML](https://github.com/posthtml/posthtml) plugin that automatically sets `width` and `height` of `<img>`.
 It supports JPG, PNG, GIF, BMP, TIFF, SVG, and WebP.
