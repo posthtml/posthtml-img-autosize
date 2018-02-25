@@ -1,8 +1,6 @@
-import expect from 'expect';
-import posthtml from 'posthtml';
-import Promise from 'bluebird';
-import imgAutosize from '..';
-
+const expect = require('expect');
+const posthtml = require('posthtml');
+const imgAutosize = require('..');
 
 describe('Plugin', () => {
     context('options.processEmptySize == false (default)', () => {
@@ -37,8 +35,8 @@ describe('Plugin', () => {
 
         it('should autosize remote PNG', () => {
             return init(
-                '<img src="http://dummyimage.com/111x52/000/fff.png" width="auto" height="25" alt="hi">',
-                '<img src="http://dummyimage.com/111x52/000/fff.png" width="111" height="25" alt="hi">'
+                '<img src="http://placehold.it/200x200" width="auto" height="25" alt="hi">',
+                '<img src="http://placehold.it/200x200" width="200" height="25" alt="hi">'
             );
         });
 
