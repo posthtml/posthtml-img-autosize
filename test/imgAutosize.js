@@ -26,8 +26,8 @@ describe('Plugin', () => {
 
         it('should autosize local PNG', () => {
             return init(
-                '<img src="img/111x52.png" width="auto" height="25" alt="hi">',
-                '<img src="img/111x52.png" width="111" height="25" alt="hi">',
+                '<img src="img/111x52.png" width="auto" height="104" alt="hi">',
+                '<img src="img/111x52.png" width="222" height="104" alt="hi">',
                 {root: './test'}
             );
         });
@@ -36,7 +36,7 @@ describe('Plugin', () => {
         it('should autosize remote PNG', () => {
             return init(
                 '<img src="http://placehold.it/200x200" width="auto" height="25" alt="hi">',
-                '<img src="http://placehold.it/200x200" width="200" height="25" alt="hi">'
+                '<img src="http://placehold.it/200x200" width="25" height="25" alt="hi">'
             );
         });
 
