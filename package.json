@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "lint": "node_modules/.bin/eslint *.js lib/*.js test/",
-    "test": "npm run lint && mocha --check-leaks"
+    "pretest": "npm run lint",
+    "test": "mocha --check-leaks"
   },
   "keywords": [
     "posthtml",
