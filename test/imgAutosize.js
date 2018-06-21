@@ -132,6 +132,18 @@ describe('Plugin', () => {
                 await init('<img src="140x83.gif" height="auto">', options)
             ).toBe('<img src="140x83.gif" height="83" width="140">');
         });
+
+        it('should throw an error if the image is not found', async () => {
+            const html = '<img src="notExists.jpg">';
+            let errorMessage;
+            try {
+                await init(html, options);
+            } catch (e) {
+                errorMessage = e.message;
+            }
+            expect(errorMessage).toContain('ENOENT');
+            expect(errorMessage).toContain('notExists.jpg');
+        });
     });
 });
 
