@@ -133,6 +133,30 @@ describe('Plugin', () => {
             ).toBe('<img src="140x83.gif" height="83" width="140">');
         });
 
+        it('should autosize <img> and keep aspect ratio with defined "width" xor "height"', async () => {
+            expect(
+                await init('<img src="111x52.png" width="333">', options)
+            ).toBe('<img src="111x52.png" width="333" height="156">');
+
+            expect(
+                await init(
+                    '<img src="111x52.png" width="333" height="auto">',
+                    options
+                )
+            ).toBe('<img src="111x52.png" width="333" height="156">');
+
+            expect(
+                await init('<img src="111x52.png" height="156">', options)
+            ).toBe('<img src="111x52.png" height="156" width="333">');
+
+            expect(
+                await init(
+                    '<img src="111x52.png" width="auto" height="156">',
+                    options
+                )
+            ).toBe('<img src="111x52.png" width="333" height="156">');
+        });
+
         it('should throw an error if the image is not found', async () => {
             const html = '<img src="notExists.jpg">';
             let errorMessage;
