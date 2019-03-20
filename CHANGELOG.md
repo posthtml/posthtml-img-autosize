@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.1.4] - 2019-03-20
+### Added
+- Option `questionMarkAsVersion` for handling images with a version in their URL.
+
 ## [0.1.3] — 2018-06-28
 ### Fixed
 - Skip images where neither width nor height is "auto".
@@ -19,7 +23,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Autosize BMP, SVG, TIFF, and WebP.
 
 
-[Unreleased]: https://github.com/posthtml/posthtml-img-autosize/compare/0.1.3...HEAD
+[0.1.4]: https://github.com/posthtml/posthtml-img-autosize/compare/0.1.3...0.1.4
 [0.1.3]: https://github.com/posthtml/posthtml-img-autosize/compare/0.1.2...0.1.3
 [0.1.2]: https://github.com/posthtml/posthtml-img-autosize/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/posthtml/posthtml-img-autosize/compare/0.1.0...0.1.1
