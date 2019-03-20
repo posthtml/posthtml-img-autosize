@@ -19,12 +19,12 @@
     "image"
   ],
   "dependencies": {
-    "image-size": "^0.6.2"
+    "image-size": "^0.7.2"
   },
   "devDependencies": {
-    "eslint": "^5.0.0",
-    "expect": "^23.0.0",
-    "mocha": "^5.2.0",
+    "eslint": "^5.15.3",
+    "expect": "^24.5.0",
+    "mocha": "^6.0.2",
     "posthtml": "^0.11.3"
   },
   "repository": {
