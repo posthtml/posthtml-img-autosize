@@ -40,6 +40,25 @@ posthtml([
 ```
 
 
+### Image versioning
+If you use `?..` for image versioning in your HTML you should set `questionMarkAsVersion: true` in the config:
+```js
+posthtml([
+        require('posthtml-img-autosize')({
+            questionMarkAsVersion: true
+        })
+    ])
+     // The image file has "photo.png" name
+    .process('<img src="photo.png?v=2" width="auto" height="auto">')
+    .then(function (result) {
+        console.log(result.html);
+    });
+
+// <img src="photo.png?v=2" width="111" height="52">
+```
+
+Without that option the plugin would search for a file with name `photo.png?v=2` on your disk.
+
 
 
 ### Error handling
