@@ -4,14 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.1.3] — 2018-06-28
 ### Fixed
-- Skip images where neither width nor height is "auto"
-- Refactor code and fix some minor bugs ([#13])
+- Skip images where neither width nor height is "auto".
+- Refactor code and fix some minor bugs ([#13]).
 
 ## [0.1.2] - 2018-02-25
 ### Added
-- Added support for file paths relative to HTML file
-- Changed supported Node version (now 4)
-- Removed dependency "Bluebird", using native Promises
+- Added support for file paths relative to HTML file.
+- Changed supported Node version (now 4).
+- Removed dependency "Bluebird", using native Promises.
 
 ## [0.1.1] - 2016-01-19
 ### Added
