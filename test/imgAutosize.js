@@ -153,6 +153,32 @@ describe('Plugin', () => {
                     expect(reason).toContain('notExists.jpg');
                 });
         });
+
+
+        it('should handle image with ? in name (by default)', () => {
+            return init(
+                '<img src="111x52.png?2" width="auto" height="104">',
+                options
+            ).then(res => {
+                expect(res).toBe(
+                    '<img src="111x52.png?2" width="222" height="104">'
+                );
+            });
+        });
+
+
+        it('should treat ?.. in image name as version (with questionMarkAsVersion = true)', () => {
+            return init(
+                '<img src="111x52.png?3" width="auto" height="104">',
+                Object.assign({
+                    questionMarkAsVersion: true,
+                }, options)
+            ).then(res => {
+                expect(res).toBe(
+                    '<img src="111x52.png?3" width="222" height="104">'
+                );
+            });
+        });
     });
 
     context('options.processEmptySize == true', () => {
