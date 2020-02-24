@@ -48,11 +48,13 @@ describe('Plugin', () => {
 
         it('should autosize remote PNG', () => {
             return init(
-                '<img src="http://placehold.it/200x200" width="auto" height="25" alt="hi">',
+                '<img src="http://placehold.it/200x200" width="auto" height="25" alt="hi">' +
+                '<img src="https://placehold.it/121x83" width="auto" height="25" alt="hi">',
                 options
             ).then(res => {
                 expect(res).toBe(
-                    '<img src="http://placehold.it/200x200" width="25" height="25" alt="hi">'
+                    '<img src="http://placehold.it/200x200" width="25" height="25" alt="hi">' +
+                    '<img src="https://placehold.it/121x83" width="36" height="25" alt="hi">'
                 );
             });
         });
