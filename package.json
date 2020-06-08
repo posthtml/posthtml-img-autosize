@@ -22,10 +22,10 @@
     "image-size": "^0.8.3"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "expect": "^25.1.0",
-    "mocha": "^7.0.1",
-    "posthtml": "^0.12.0"
+    "eslint": "^7.2.0",
+    "expect": "^26.0.1",
+    "mocha": "^7.2.0",
+    "posthtml": "^0.13.0"
   },
   "repository": {
     "type": "git",
