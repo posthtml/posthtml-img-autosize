@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.1.5] - 2020-06-08
+### Fixed
+- Round `width` and `height` to whole numbers.
+- Fix images fetching via HTTPS ([#15]).
+
 ## [0.1.4] - 2019-03-20
 ### Added
 - Option `questionMarkAsVersion` for handling images with a version in their URL.
@@ -23,9 +28,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Autosize BMP, SVG, TIFF, and WebP.
 
 
+[0.1.5]: https://github.com/posthtml/posthtml-img-autosize/compare/0.1.4...0.1.5
 [0.1.4]: https://github.com/posthtml/posthtml-img-autosize/compare/0.1.3...0.1.4
 [0.1.3]: https://github.com/posthtml/posthtml-img-autosize/compare/0.1.2...0.1.3
 [0.1.2]: https://github.com/posthtml/posthtml-img-autosize/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/posthtml/posthtml-img-autosize/compare/0.1.0...0.1.1
 
 [#13]: https://github.com/posthtml/posthtml-img-autosize/pull/13
+[#15]: https://github.com/posthtml/posthtml-img-autosize/pull/15
