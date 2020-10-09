@@ -1,13 +1,13 @@
 {
   "name": "posthtml-img-autosize",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Auto setting width and height of img tag",
   "author": "Kirill Maltsev <maltsevkirill@gmail.com>",
   "license": "MIT",
   "scripts": {
     "lint": "node_modules/.bin/eslint *.js lib/*.js test/",
     "pretest": "npm run lint",
-    "test": "mocha --check-leaks"
+    "test": "nyc mocha --check-leaks"
   },
   "keywords": [
     "posthtml",
@@ -19,12 +19,14 @@
     "image"
   ],
   "dependencies": {
-    "image-size": "^0.8.3"
+    "image-size": "^0.9.1",
+    "normalize-path": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^7.2.0",
     "expect": "^26.0.1",
-    "mocha": "^7.2.0",
+    "mocha": "^8.1.3",
+    "nyc": "^15.1.0",
     "posthtml": "^0.13.0"
   },
   "repository": {
