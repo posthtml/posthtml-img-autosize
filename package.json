@@ -1,6 +1,6 @@
 {
   "name": "posthtml-img-autosize",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Auto setting width and height of img tag",
   "author": "Kirill Maltsev <maltsevkirill@gmail.com>",
   "license": "MIT",
