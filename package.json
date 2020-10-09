@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "node_modules/.bin/eslint *.js lib/*.js test/",
     "pretest": "npm run lint",
-    "test": "mocha --check-leaks"
+    "test": "nyc mocha --check-leaks"
   },
   "keywords": [
     "posthtml",
@@ -19,7 +19,8 @@
     "image"
   ],
   "dependencies": {
-    "image-size": "^0.8.3"
+    "image-size": "^0.8.3",
+    "nyc": "^15.1.0"
   },
   "devDependencies": {
     "eslint": "^7.2.0",
